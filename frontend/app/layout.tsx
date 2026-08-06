@@ -27,9 +27,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
 
       <body className="font-rubik">
         <Header/>
-        <Sidebar/>
-        {children}
-        
+        <div className="flex">
+          <Sidebar/>
+          <main className="flex-1">{children}</main>
+        </div>
         <Footer/>
         </body>
       
