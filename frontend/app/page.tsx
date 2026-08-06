@@ -1,26 +1,23 @@
 "use client"
 export default function Home() {
   
-  const handleClick=async()=>{
- await fetch(process.env.NEXT_PUBLIC_URL_BACKEND,{
- method:"POST", 
- headers:{
-    "Content-Type":"application/json"
-
-  },
-  
-  body:JSON.stringify({
-    name:"Nguyen Van A",
-    age:20
-  })
-  
- })
-  }
-
   return (
     <> 
-    <button id="btn" onClick={handleClick}>Click do</button>
-    <div> Xin chào</div>
+    <div id="body"> 
+    <div className="body__container">
+      <div id="body__section1">
+        <div id="body__section1__label">User Registration</div>
+        <div id="body__section1__label--input">
+          <input type="text" placeholder="Enter registration number" className="body__section1__label--input__name"/>
+        </div>
+      </div>
+      <div id="body__section2">
+
+      </div>
+    </div>
+ </div>
+
     </>
   );
+
 }
