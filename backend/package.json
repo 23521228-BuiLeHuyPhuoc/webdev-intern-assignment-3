@@ -11,13 +11,15 @@
     "@types/express": "^5.0.6",
     "@types/node": "^26.1.2",
     "cors": "^2.8.6",
+    "csv-parse": "^7.0.2",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "tsx": "^4.23.9",
     "typescript": "^7.0.2"
   },
   "scripts": {
-    "start": "tsx watch --clear-screen=false index.ts"
+    "start": "tsx watch --clear-screen=false index.ts",
+    "seed": "tsx prisma/seed.ts"
   },
   "devDependencies": {
     "prisma": "^7.9.1"
