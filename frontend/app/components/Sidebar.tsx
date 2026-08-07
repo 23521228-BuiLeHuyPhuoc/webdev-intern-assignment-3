@@ -10,10 +10,10 @@ export default function Sidebar(){
             </div>
            
             <ul className="sidebar__list flex flex-col ">
-                <li className="p-2 hover:bg-gray-200"><Link href="/dashboard">Dashboard</Link></li>
-                <li className="p-2 hover:bg-gray-200"><Link href="/search-scores">Search Scores</Link></li>
-                <li className="p-2 hover:bg-gray-200"><Link href="/reports">Reports</Link></li>
-                <li className="p-2 hover:bg-gray-200"><Link href="/settings">Settings</Link></li>
+                <li className="p-2 hover:bg-blue-200"><Link href="/dashboard">Dashboard</Link></li>
+                <li className="p-2 hover:bg-blue-200"><Link href="/search-scores">Search Scores</Link></li>
+                <li className="p-2 hover:bg-blue-200"><Link href="/reports">Reports</Link></li>
+                <li className="p-2 hover:bg-blue-200"><Link href="/settings">Settings</Link></li>
             </ul>
 
             </div>
