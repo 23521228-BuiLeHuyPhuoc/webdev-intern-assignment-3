@@ -12,6 +12,16 @@ datasource db {
   provider = "postgresql"
 }
 
-model StudentScore {
-  sbd String @id @db.VarChar(8)
+model STUDENT_SCORE {
+  SoBaoDanh String @id @db.VarChar(8)
+  DiemToan Decimal? @db.Decimal(4,2)
+  NguVan Decimal? @db.Decimal(4,2)
+  NgoaiNgu Decimal? @db.Decimal(4,2)
+  VatLi Decimal? @db.Decimal(4,2)
+  HoaHoc Decimal? @db.Decimal(4,2)
+  SinhHoc Decimal? @db.Decimal(4,2)
+  LichSu Decimal? @db.Decimal(4,2)
+  DiaLi Decimal? @db.Decimal(4,2)
+  GDCD Decimal? @db.Decimal(4,2)
+  MaNgoaiNgu String?
 }
