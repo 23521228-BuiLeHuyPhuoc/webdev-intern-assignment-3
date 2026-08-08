@@ -14,16 +14,15 @@
     "csv-parse": "^7.0.2",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
-    "tsx": "^4.23.9",
-    "typescript": "^7.0.2"
+    "tsx": "^4.23.9"
   },
   "scripts": {
     "start": "tsx watch --clear-screen=false index.ts",
     "seed": "tsx prisma/seed.ts",
     "postinstall": "prisma generate"
-
   },
   "devDependencies": {
-    "prisma": "^7.9.1"
+    "prisma": "^7.9.1",
+    "typescript": "5.9.3"
   }
 }
