@@ -11,6 +11,7 @@ const scoreFormatter = new Intl.NumberFormat("vi-VN", {
 
 export default function Home() {
   const [students, setStudents] = useState<GroupAStudent[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -45,6 +46,10 @@ export default function Home() {
         toast.error("An error occurred while fetching top students.", {
           id: "top-students-fetch-error",
         });
+      } finally {
+        if (!controller.signal.aborted) {
+          setIsLoading(false);
+        }
       }
     };
 
@@ -80,7 +85,21 @@ export default function Home() {
                 </tr>
               </thead>
               <tbody>
-                {students.map((student, index) => {
+                {isLoading &&
+                  Array.from({ length: 5 }).map((_, row) => (
+                    <tr key={row}>
+                      <td>
+                        <span className="block h-[30px] w-[30px] animate-pulse rounded-full bg-gray-200" />
+                      </td>
+                      {Array.from({ length: 5 }).map((_, cell) => (
+                        <td key={cell}>
+                          <span className="block h-4 w-20 animate-pulse rounded bg-gray-200" />
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+
+                {!isLoading && students.map((student, index) => {
                   const total =
                     student.DiemToan + student.VatLi + student.HoaHoc;
 
