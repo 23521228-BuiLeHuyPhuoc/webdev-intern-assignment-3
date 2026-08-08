@@ -1,4 +1,56 @@
+:root {
+  --header-color: #0f2289;
+  --header-text-color: #ffffff;
+  --sidebar-color: linear-gradient(
+    180deg,
+    #ffdf00 0%,
+    #d9ce14 28%,
+    #83aa62 60%,
+    #318a93 100%
+  );
+  --sidebar-text-color: #101321;
+}
 
+:root.swap-colors {
+  --header-color: linear-gradient(
+    180deg,
+    #ffdf00 0%,
+    #d9ce14 28%,
+    #83aa62 60%,
+    #318a93 100%
+  );
+  --header-text-color: #101321;
+  --sidebar-color: #0f2289;
+  --sidebar-text-color: #ffffff;
+}
+
+.sidebar {
+  color: var(--sidebar-text-color);
+  background: var(--sidebar-color);
+}
+
+.header {
+  color: var(--header-text-color);
+  background: var(--header-color);
+}
+
+.settings-page {
+  display: grid;
+  min-height: calc(100vh - 76px);
+  place-items: center;
+  background: #f8f9fa;
+
+  button {
+    padding: 24px 64px;
+    color: #ffffff;
+    background: #0f2289;
+    border: 0;
+    border-radius: 12px;
+    font-size: 28px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+}
 .body{
   min-height: 100%;
   background-color: #F8F9FA;

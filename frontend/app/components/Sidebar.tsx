@@ -1,8 +1,7 @@
 import Link from "next/link";
 export default function Sidebar(){
     return(
-        <>
-        <div className="sidebar h-auto w-full shrink-0 bg-[yellow] md:min-h-[calc(100vh-76px)] md:w-[220px]">
+        <div className="sidebar h-auto w-full shrink-0 md:min-h-[calc(100vh-76px)] md:w-[220px]">
 
             <div className="sidebar__container w-[100%] h-[100%] ">
             <div className="sidebar__text py-3 text-center font-bold text-[25px]">
@@ -18,9 +17,5 @@ export default function Sidebar(){
 
             </div>
         </div>
-        
-        
-        
-        </>
     )
 }
