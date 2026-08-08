@@ -19,7 +19,9 @@
   },
   "scripts": {
     "start": "tsx watch --clear-screen=false index.ts",
-    "seed": "tsx prisma/seed.ts"
+    "seed": "tsx prisma/seed.ts",
+    "postinstall": "prisma generate"
+
   },
   "devDependencies": {
     "prisma": "^7.9.1"
