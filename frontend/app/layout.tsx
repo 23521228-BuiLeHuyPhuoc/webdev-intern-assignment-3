@@ -26,10 +26,10 @@ export default async function RootLayout({ children }: LayoutProps<"/">) {
     >
       
 
-      <body className="font-rubik">
+      <body className="flex min-h-screen flex-col font-rubik">
           <Toaster position="top-right" richColors />
         <Header/>
-        <div className="flex min-h-[calc(100vh-76px)] flex-col md:flex-row">
+        <div className="flex flex-1 flex-col md:flex-row">
           <Sidebar/>
           <main className="min-w-0 flex-1">{children}</main>
         </div>

@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
-import type { GroupAStudent } from "./interfaces/GroupAStudent";
+import type { GroupAStudent } from "./interfaces/GroupAStudent.interface";
 
 const scoreFormatter = new Intl.NumberFormat("vi-VN", {
   minimumFractionDigits: 0,
