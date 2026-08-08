@@ -34,6 +34,18 @@
   background: var(--header-color);
 }
 
+.footer {
+  padding: 16px 24px;
+  color: var(--header-text-color);
+  background: var(--header-color);
+  font-size: 14px;
+  text-align: center;
+
+  p {
+    margin: 0;
+  }
+}
+
 .settings-page {
   display: grid;
   min-height: calc(100vh - 76px);
