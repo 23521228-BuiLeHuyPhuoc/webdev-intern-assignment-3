@@ -58,7 +58,150 @@
   }
 }
 
+.dashboard {
+  min-height: 100%;
+  padding: 32px;
+  background-color: #f8f9fa;
+
+  &__container {
+    width: min(100%, 1100px);
+    margin: 0 auto;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 24px;
+
+    p {
+      margin: 0 0 4px;
+      color: #5c6470;
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 30px;
+      font-weight: 700;
+    }
+
+    span {
+      display: block;
+      margin-top: 8px;
+      color: #666;
+    }
+  }
+
+  &__subject-badge {
+    display: grid;
+    width: 70px;
+    height: 70px;
+    flex-shrink: 0;
+    place-items: center;
+    color: white;
+    background-color: #1d4ed8;
+    border-radius: 50%;
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  &__card {
+    min-height: 180px;
+    padding: 24px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+  }
+
+  &__message {
+    margin: 48px 0;
+    color: #666;
+    text-align: center;
+  }
+
+  &__message--error {
+    color: #b42318;
+  }
+
+  &__table-wrapper {
+    overflow-x: auto;
+  }
+
+  &__table {
+    width: 100%;
+    min-width: 680px;
+    border-collapse: collapse;
+
+    th,
+    td {
+      padding: 14px 12px;
+      text-align: left;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    th {
+      color: #374151;
+      background-color: #f3f4f6;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    tbody tr:last-child td {
+      border-bottom: 0;
+    }
+
+    td:last-child strong {
+      color: #1d4ed8;
+    }
+  }
+
+  &__rank {
+    display: inline-grid;
+    width: 30px;
+    height: 30px;
+    place-items: center;
+    background-color: #e5e7eb;
+    border-radius: 50%;
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  &__rank--1 {
+    background-color: #facc15;
+  }
+
+  &__rank--2 {
+    background-color: #d1d5db;
+  }
+
+  &__rank--3 {
+    background-color: #fdba74;
+  }
+}
+
 @media (max-width: 640px) {
+  .dashboard {
+    padding: 24px 16px;
+
+    &__header h1 {
+      font-size: 25px;
+    }
+
+    &__subject-badge {
+      width: 56px;
+      height: 56px;
+      font-size: 18px;
+    }
+
+    &__card {
+      padding: 14px;
+    }
+  }
+
   .body__section {
     padding: 24px 18px;
   }

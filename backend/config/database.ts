@@ -18,7 +18,7 @@ export const prisma = new PrismaClient({
 });
 export async function connectDatabase(): Promise<void> {
   try {
-    await prisma.$connect;
+    await prisma.$connect();
     console.log("Kết nối cơ sở dữ liệu thành công!");
   } catch (error) {
     console.error("Lỗi sau xảy ra khi kết nối cơ sở dữ liệu:", error);

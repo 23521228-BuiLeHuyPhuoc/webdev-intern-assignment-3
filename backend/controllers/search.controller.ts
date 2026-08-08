@@ -1,12 +1,11 @@
 import type { Request, Response } from "express";
 import { prisma } from "../config/database";
 
-export async function getStudentParams(req: Request, res: Response) {
+export async function getStudentParams(
+  req: Request<{ id: string }>,
+  res: Response,
+) {
   const param = req.params.id;
-
-  if (typeof param !== "string") {
-    return res.status(400).json({ message: "Invalid registration number" });
-  }
 
   const record = await prisma.sTUDENT_SCORE.findUnique({
     where: {
@@ -14,5 +13,8 @@ export async function getStudentParams(req: Request, res: Response) {
     },
   });
 
-  return res.json(record);
+  return res.json({
+    message: record ? "success" : "not found",
+    data: record || null,
+  });
 }

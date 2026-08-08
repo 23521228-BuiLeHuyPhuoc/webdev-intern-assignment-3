@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import {Toaster} from "sonner";
 import { Geist, Geist_Mono, Rubik} from "next/font/google";
 import "./globals.scss";
 import "./taiwind.css";
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
   description: "Đây là trang dùng chung cho tất cả các trang con",
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default async function RootLayout({ children }: LayoutProps<"/">) {
   return (
 
     <html
@@ -26,6 +27,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       
 
       <body className="font-rubik">
+          <Toaster position="top-right" richColors />
         <Header/>
         <div className="flex min-h-[calc(100vh-76px)] flex-col md:flex-row">
           <Sidebar/>

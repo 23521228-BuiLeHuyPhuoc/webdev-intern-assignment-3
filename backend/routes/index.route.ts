@@ -1,8 +1,10 @@
 import { Router } from "express";
-import { getStudentParams } from "../controllers/search.controller";
+import searchRouter from "./search.route";
+import dashboardRouter from "./dashboard.route";
 
 const router = Router();
 
-router.get("/search-scores/:id", getStudentParams);
+router.use("/search-scores", searchRouter);
+router.use("/top-scores", dashboardRouter);
 
 export default router;
