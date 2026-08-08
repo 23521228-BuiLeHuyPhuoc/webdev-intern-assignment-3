@@ -1,8 +1,8 @@
 import { createReadStream } from "node:fs";
 import { parse } from "csv-parse";
+import { Prisma } from "@prisma/client";
 import {CSV_TO_DATABASE} from "../variables/variables.js";
 import { prisma } from "../config/database.js";
-import { Prisma } from "../generated/prisma/client.js";
 
 async function Seed(): Promise<void> {
   const csvParser = createReadStream(
