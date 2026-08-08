@@ -1,6 +1,6 @@
 import type { Request, Response } from "express";
 import { Prisma } from "../generated/prisma/client.js";
-import { prisma } from "../config/database";
+import { prisma } from "../config/database.js";
 
 const scoreFields = Object.values(Prisma.STUDENT_SCOREScalarFieldEnum).filter(
   (field) => field !== "SoBaoDanh" && field !== "MaNgoaiNgu",

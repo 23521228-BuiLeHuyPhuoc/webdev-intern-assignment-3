@@ -1,5 +1,5 @@
 import type { Request, Response } from "express";
-import { prisma } from "../config/database";
+import { prisma } from "../config/database.js";
 
 export async function getStudentParams(
   req: Request<{ id: string }>,

@@ -1,7 +1,7 @@
 import { Router } from "express";
-import searchRouter from "./search.route";
-import dashboardRouter from "./dashboard.route";
-import reportsRouter from "./reports.route";
+import searchRouter from "./search.route.js";
+import dashboardRouter from "./dashboard.route.js";
+import reportsRouter from "./reports.route.js";
 const router = Router();
 
 router.use("/search-scores", searchRouter);
