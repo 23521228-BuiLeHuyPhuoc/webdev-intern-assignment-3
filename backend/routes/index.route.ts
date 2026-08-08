@@ -1,6 +1,8 @@
 import { Router } from "express";
-import { type Request, type Response } from "express";
-import { handleClick } from "../controllers/click.controller";
-const router=Router();
-router.post("/",handleClick);
+import { getStudentParams } from "../controllers/search.controller";
+
+const router = Router();
+
+router.get("/search-scores/:id", getStudentParams);
+
 export default router;
